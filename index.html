@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NoverisCraft | BoxPvP</title>
+<meta name="description" content="NoverisCraft Minecraft BoxPvP sunucusu.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#070a12;--panel:#0d1220;--text:#f4f7ff;--muted:#9ba6bb;--accent:#7c5cff;--accent2:#22d3ee}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 50% -10%,#18204b 0,#070a12 45%);color:var(--text);min-height:100vh}
+a{text-decoration:none;color:inherit}
+nav{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;border-bottom:1px solid #ffffff10;background:#070a12cc;backdrop-filter:blur(12px);position:sticky;top:0;z-index:10}
+.logo{font-size:24px;font-weight:900;letter-spacing:.5px}.logo span{color:var(--accent2)}
+.navlinks{display:flex;gap:28px;color:#c8d0df;font-size:14px}.navlinks a:hover{color:white}
+.hero{min-height:650px;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 20px;position:relative;overflow:hidden}
+.glow{position:absolute;width:500px;height:500px;background:#6d4aff33;filter:blur(100px);border-radius:50%}
+.hero-content{position:relative;max-width:900px}
+.badge{display:inline-block;padding:8px 14px;border:1px solid #ffffff16;background:#ffffff08;border-radius:999px;color:#bfc8dc;font-size:13px;margin-bottom:25px}
+h1{font-size:clamp(52px,9vw,100px);line-height:.9;letter-spacing:-5px}
+h1 span{background:linear-gradient(90deg,#fff,#9d8cff,#4de8ff);-webkit-background-clip:text;color:transparent}
+.hero p{max-width:650px;margin:25px auto;color:var(--muted);font-size:17px;line-height:1.7}
+.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:14px 22px;border-radius:12px;font-weight:800;font-size:14px;transition:.2s}
+.primary{background:linear-gradient(135deg,var(--accent),#5540d8);box-shadow:0 10px 35px #7c5cff35}.secondary{border:1px solid #ffffff18;background:#ffffff08}
+.btn:hover{transform:translateY(-2px)}
+section{padding:85px 7%;max-width:1200px;margin:auto}
+.section-title{text-align:center;margin-bottom:45px}.section-title h2{font-size:38px}.section-title p{color:var(--muted);margin-top:10px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(180deg,#101625,#0b0f1a);border:1px solid #ffffff0d;border-radius:18px;padding:28px;min-height:190px}
+.icon{font-size:30px;margin-bottom:18px}.card h3{font-size:20px;margin-bottom:10px}.card p{color:var(--muted);line-height:1.6;font-size:14px}
+.server{display:flex;align-items:center;justify-content:space-between;gap:30px;background:linear-gradient(120deg,#11182b,#0d1220);border:1px solid #ffffff10;border-radius:22px;padding:35px}
+.ip{font-family:Consolas,monospace;font-size:22px;color:#75e9ff;margin-top:8px}
+.status{color:#6ee7a1;font-size:13px;margin-top:8px}.copy{cursor:pointer;border:0;color:white}
+footer{border-top:1px solid #ffffff0d;text-align:center;padding:35px 20px;color:#6f7a90;font-size:13px}
+@media(max-width:750px){.navlinks{display:none}.cards{grid-template-columns:1fr}.server{flex-direction:column;text-align:center}h1{letter-spacing:-3px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Noveris<span>Craft</span></div>
+  <div class="navlinks"><a href="#oyun">Oyun</a><a href="#sunucu">Sunucu</a><a href="#discord">Discord</a></div>
+</nav>
+
+<header class="hero">
+  <div class="glow"></div>
+  <div class="hero-content">
+    <div class="badge">⚡ 1.21.4 • BOX PVP</div>
+    <h1>NOVERIS<span>CRAFT</span></h1>
+    <p>Hızlı PvP, özel madenler ve rekabetçi BoxPvP deneyimi. Arenaya gir, geliş, savaş ve zirveye çık.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#sunucu">SUNUCUYA KATIL</a>
+      <a class="btn secondary" href="#oyun">ÖZELLİKLER</a>
+    </div>
+  </div>
+</header>
+
+<section id="oyun">
+  <div class="section-title"><h2>Sunucuda Seni Ne Bekliyor?</h2><p>NoverisCraft'ın temel özellikleri</p></div>
+  <div class="cards">
+    <div class="card"><div class="icon">⚔️</div><h3>BoxPvP</h3><p>Hızlı savaşlar, gelişim sistemi ve rekabetçi PvP deneyimi.</p></div>
+    <div class="card"><div class="icon">⛏️</div><h3>Özel Madenler</h3><p>Kaynak topla, ekipmanını geliştir ve daha güçlü rakiplerle savaş.</p></div>
+    <div class="card"><div class="icon">🏆</div><h3>Rekabet</h3><p>Ekonomi, kasalar ve sıralamalarla sunucunun en güçlü oyuncusu olmaya çalış.</p></div>
+  </div>
+</section>
+
+<section id="sunucu">
+  <div class="server">
+    <div><div style="color:#9ba6bb;font-size:13px">NOVERISCRAFT SUNUCU IP</div><div class="ip" id="ip">noveriscraft.mcsh.io</div><div class="status">● NoverisCraft BoxPvP • 1.21.4</div></div>
+    <button class="btn primary copy" onclick="copyIP()">IP'Yİ KOPYALA</button>
+  </div>
+</section>
+
+<section id="discord">
+  <div class="section-title"><h2>Topluluğa Katıl</h2><p>Duyurular, etkinlikler ve destek için Discord'a katıl.</p></div>
+  <div class="buttons"><a class="btn primary" href="https://discord.gg/FxfnvVc8E" target="_blank" rel="noopener">DISCORD'A KATIL</a></div>
+</section>
+
+<footer>© 2026 NoverisCraft • Tüm hakları saklıdır.</footer>
+<script>
+function copyIP(){
+ const ip=document.getElementById("ip").innerText;
+ navigator.clipboard?.writeText(ip);
+ alert("Sunucu IP'si kopyalandı!");
+}
+</script>
+</body>
+</html>
